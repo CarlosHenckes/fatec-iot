@@ -4,5 +4,5 @@ spring:
   
   data:
     mongodb:
-      uri: mongodb://fatec:fatec12345@cluster0-shard-00-00.n5i3p.mongodb.net:27017,cluster0-shard-00-01.n5i3p.mongodb.net:27017,cluster0-shard-00-02.n5i3p.mongodb.net:27017/fateciot?ssl=true&replicaSet=atlas-rw2lyx-shard-0&authSource=admin&retryWrites=true&w=majority
+      uri: mongodb://${mongouser}:${mongopass}@cluster0-shard-00-00.n5i3p.mongodb.net:27017,cluster0-shard-00-01.n5i3p.mongodb.net:27017,cluster0-shard-00-02.n5i3p.mongodb.net:27017/fateciot?ssl=true&replicaSet=atlas-rw2lyx-shard-0&authSource=admin&retryWrites=true&w=majority
       database: fateciot
