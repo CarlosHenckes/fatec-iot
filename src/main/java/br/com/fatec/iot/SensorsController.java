@@ -27,6 +27,13 @@ public class SensorsController {
 	}
 	
 	@ResponseStatus(code = HttpStatus.OK)
+	@PostMapping
+	public String savePost(@RequestBody final DataDTO data) {
+		log.info("SensorsController.savePost - start. data: [{}]", data);
+		return service.saveSensorData(data);
+	}
+	
+	@ResponseStatus(code = HttpStatus.OK)
 	@GetMapping(value = "/data")
 	public List<DataDTO> findAll() {
 		log.info("SensorsController.findAll - start.");
